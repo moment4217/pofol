@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sold out</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        li {
+            list-style: none;
+        }
+        body {
+            color: #333;
+            line-height: 1;
+        }
+        header {
+            width: 1440px;
+            margin: 0 auto;
+            padding: 0 46px;
+            align-items: center;
+
+        }
+        header .hd .top {
+            height: 100%;
+        }
+        header .hd .top ul {
+            display: flex;
+            justify-content: right;
+            padding-top: 10px;
+            padding-left: 25px;
+
+        }
+        header .hd .top ul li {
+            font-size: 14px;
+            margin-left: 23px;
+        }
+
+        header .hd .mid {
+            font-size: 20px;
+            line-height: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        header .hd .mid div ul {
+            display: flex;
+        }
+        header .hd .mid div ul li {
+            padding-left: 44px;
+
+        }
+/* header end */
+        .main_banner {
+
+            width: 1440px;
+            margin: 30px auto 100px;
+        }
+/* main_visual end */
+        .cont01 {
+            width: 1440px;
+            margin: 0 auto;
+        }
+        .cont01 .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .cont01 .list .item figure {
+            width: 256px;
+            height: 112px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .cont01 .list .item:hover figure img {
+            transform: scale(1.2);
+            transition: 0.7s;
+        }
+        .cont01 .list .item h4 {
+            font-size: 20px;
+            margin: 15px 0 30px;
+            text-align: center;    
+        }
+/* cont01 end */
+        .cont02 {
+            width: 1440px;
+            margin: 0 auto;
+        }
+        .cont02 .inner h2 {
+            margin-top: 100px;
+            font-size: 45px;
+        }        
+        .cont02 .inner > p {
+            font-size: 20px;
+            margin: 20px 0 50px;
+        }
+        .cont02 .inner .list {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont02 .inner .list div h4 {
+            font-size: 18px;
+            margin: 15px 0 20px;
+        }
+        .cont02 .inner .list div span {
+            font-size: 18px;
+            font-weight: 800;
+        }
+        .cont02 .inner .list div strong {
+            display: block;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .cont02 .inner .list div p {
+            color: #727272;
+        }
+        .cont02 .inner > a {
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: #727272;
+            color: #fff;
+            line-height: 30px;
+            display: block;
+            text-align: center;
+            margin: 50px auto 100px;
+        }
+/* cont02 end */
+        .cont03 {
+            width: 1440px;
+            margin: 0 auto;
+        }
+        .cont03 .inner h2 {
+            font-size: 45px;
+        }
+        .cont03 .inner > p {
+            font-size: 20px;
+            margin: 20px 0 50px;
+        }
+        .cont03 .inner .item01 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont03 .inner .item01 h4 {
+            font-size: 34px;
+            margin: 56px 0 30px;
+        }
+        .cont03 .inner .item01 > a img {
+            width: 593px;
+            height: 585px;
+        }
+        .cont03 .inner .item01 strong {
+            font-size: 20px;
+            color: blue;
+            line-height: 1.3;
+            margin-bottom: 100px;
+            display: block;
+        }
+        .cont03 .inner .item01 div nav {
+           display: flex;
+        }
+        .cont03 .inner .item01 div dl {
+            margin-right: 70px;
+        }
+        .cont03 .inner .item01 div nav dd {
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+        }
+        .cont03 .inner .item01 div p {
+            margin-top: 30px;
+        }
+
+        .cont03 .inner .item02 {
+            margin: 100px 0 100px;
+            display: flex;
+        }
+        .cont03 .inner .item02 div {
+            margin-left: 70px;
+        }
+
+        .cont03 .inner .item02 h4 {
+            font-size: 34px;
+            margin: 56px 0 30px;
+        }
+        .cont03 .inner .item02 > a img {
+            width: 574px;
+            height: 737px;
+        }
+        .cont03 .inner .item02 strong {
+            font-size: 20px;
+            color: blue;
+            line-height: 1.3;
+            margin-bottom: 250px;
+            display: block;
+        }
+        .cont03 .inner .item02 div nav {
+           display: flex;
+
+        }
+        .cont03 .inner .item02 div dl {
+            padding-right: 70px;
+        }
+        .cont03 .inner .item02 div nav dd {
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+        }
+        .cont03 .inner .item02 div p {
+            margin-top: 30px;
+        }
+/* cont03 end */
+        footer {
+            width: 1440px;
+            background-color: #727272;
+            color: #fff;
+            font-size: 10px;
+            margin: 0 auto;
+        }
+        footer .inner .top {
+            border-bottom: 1px solid #fff;
+        }
+        footer .inner .top ul {
+            height: 36px;
+            display: flex;
+            margin-left: 100px;
+            align-items: center;
+            
+        }
+        footer .inner .top ul li {
+            margin-right: 31px;
+        }
+        footer .inner .mid {
+            margin-left: 100px;
+            display: flex;
+        }
+        footer .inner .mid dt {
+            margin: 25px 0 17px;
+        }
+        footer .inner .mid .d01 dd {
+            margin-bottom: 30px;
+        }
+        footer .inner .mid .d02 {
+            margin-left: 338px;
+        }
+        footer .inner .mid .d02 ul {
+            display: flex;
+        }
+        footer .inner .mid .d02 dd {
+            margin-bottom: 15px;
+        }
+        footer .inner .mid .d02 ul li {
+            margin-right: 15px;
+        }
+/* footer end */
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hd">            
+            <div class="top">
+                <ul>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">관심상품</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="#">로그인</a></li>
+                </ul>     
+            </div><!-- .top end -->
+            <div class="mid">
+                <h1>
+                    <a href="#"><img src="img/logo-soldout.png" alt="logo"></a>
+                </h1>
+                    <p><a href="#"><img src="img/돋보기.png" alt="검색창"></a></p>
+                <div>
+                    <ul>
+                        <li>Style</li>
+                        <li>Trade</li>
+                        <li>Community</li>
+                    </ul>
+                </div>
+            </div><!-- .mid end -->
+        </div><!-- .hd end -->
+    </header>
+    <section class="main_banner">
+        <a href="#"><img src="img/main banner.png" alt="메인배너"></a>
+    </section>
+    <section class="cont01">
+        <div class="list">
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/무신사런.png" alt="신발"></a>
+                </figure>
+                <h4>무신사런</h4>
+            </div><!-- .item1 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/men.png" alt="MEN"></a>
+                </figure>
+                <h4>남자</h4>
+            </div><!-- .item2 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/women.png" alt="WOMEN"></a>
+                </figure>
+                <h4>여자</h4>
+            </div><!-- .item3 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/lucky.png" alt="lucky druw"></a>
+                </figure>
+                <h4>럭키 드로우</h4>
+            </div><!-- .item4 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/브랜드관.png" alt="브랜드관"></a>
+                </figure>
+                <h4>이번주 브랜드관</h4>
+            </div><!-- .item5 end -->
+
+
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/정가.png" alt="정가이하"></a>
+                </figure>
+                <h4>정가이하</h4>
+            </div><!-- .item6 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/인기명품.png" alt="인기명품"></a>
+                </figure>
+                <h4>인기명품</h4>
+            </div><!-- .item7 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/크리스마스.png" alt="크리스마스"></a>
+                </figure>
+                <h4>크리스마스</h4>
+            </div><!-- .item8 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/주간 베스트.png" alt="주베 스타일"></a>
+                </figure>
+                <h4>주간베스트 스타일링</h4>
+            </div><!-- .item9 end -->
+            <div class="item">
+                <figure>
+                    <a href="#"><img src="img/주베 랭킹.png" alt="랭킹"></a>
+                </figure>
+                <h4>주간 베스트 랭킹</h4>
+            </div><!-- .item10 end -->
+        </div><!-- .list end -->
+    </section><!-- .cont01 end -->
+
+    <section class="cont02">
+        <div class="inner">
+            <h2>Most Popular</h2>
+            <p>인기상품</p>
+            <div class="list">
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/992.png" alt="992">
+                        </figure>
+                        <div>
+                            <h4>Now balance</h4>
+                            <span>뉴발란스992 그레이 (D Standard)</span>
+                        </div>
+                        <div>
+                            <strong>514,500원</strong>
+                            <p>즉시구매가</p>
+                        </div>
+                    </a>
+                </div><!-- .item01 end -->
+
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/범고래.png" alt="범고래">
+                        </figure>
+                        <div>
+                            <h4>Nike</h4>
+                            <span>나이키 덩크 로우 레트로 화이트 블랙</span>
+                        </div>
+                        <div>
+                            <strong>220,000원</strong>
+                            <p>즉시구매가</p>
+                        </div>
+                    </a>
+                </div><!-- .item02 end -->
+
+                <div class="item">
+                    <a href="#">
+                        <figure>
+                            <img src="img/삼바.png" alt="삼바">
+                        </figure>
+                        <div>
+                            <h4>adidas</h4>
+                            <span>아디다스 삼바 ADV 블랙</span>
+                        </div>
+                        <div>
+                            <strong>183,500원</strong>
+                            <p>즉시구매가</p>
+                        </div>
+                    </a>
+                </div><!-- .item03 end -->
+
+                <div class="item">
+                    <figure>
+                        <a href="#">
+                            <img src="img/아디다스.png" alt="오닉스">
+                        </figure>
+                        <div>
+                            <h4>Now balance</h4>
+                            <span>아디다스 포럼 로우 배드 버니 클라우드<br> 
+                                화이트 클리어 오닉스</span>
+                        </div>
+                        <div>
+                            <strong>220,500원</strong>
+                            <p>즉시구매가</p>
+                        </div>
+                    </a>
+                </div><!-- .item04 end -->
+            </div><!-- .list end -->
+            <a href="#">더보기</a>
+        </div><!-- .inner end -->
+    </section><!-- .cont02 end -->
+
+    <section class="cont03">
+        <div class="inner">
+            <h2>Style Picks!!</h2>
+            <p>인기 상품</p>
+            <div class="item01">
+                <a href="#"><img src="img/1번 스타일링.png" alt="1번 스타일링"></a>
+                <div>
+                    <img src="img/1번 상단바.png" alt="">
+                    <h4>@arsongar</h4>
+                    <strong>#ootd #눕시패딩 #700<br> 
+                        #크림챌린지 #워밍업챌린지 #크림데일리룩</strong>
+                    <nav>
+                        <dl>
+                            <dt><a href="#"><img src="img/프라다백.png" alt="프라다백"></a></dt>
+                            <dd>1,358,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"><img src="img/노페눕시.png" alt="노페눕시"></a></dt>
+                            <dd>379,000원</dd>
+                        </dl>
+                    </nav>
+                    <p>사진속 상품이 궁금할 땐, 아래 상품 이미지를 눌러보세요.</p>
+
+                </div>
+            </div>
+
+            <div class="item02">
+                <div>
+                    <img src="img/2번 상단바.png" alt="상단바">
+                    <h4>@lm_s04</h4>
+                    <strong>#미리메리챌린지 #눕시 #눕시패딩 #에어팟맥스 #어그부츠<br> 
+                        #어그 #어그부츠코디 #ootd #캐주얼룩 #캐트릿 #눕시700 </strong>
+                    <nav>
+                        <dl>
+                            <dt><a href="#"><img src="img/어그부츠.png" alt="어그부츠"></a></dt>
+                            <dd>215,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"><img src="img/패딩.png" alt="패딩"></a></dt>
+                            <dd>368,000원</dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="#"><img src="img/헤드셋.png" alt="헤드셋"></a></dt>
+                            <dd>693,000원</dd>
+                        </dl>
+                    </nav>
+                    <p>사진속 상품이 궁금할 땐, 아래 상품 이미지를 눌러보세요.</p>
+
+                </div>
+                <a href="#"><img src="img/2번 스타일링.png" alt="1번 스타일링"></a>
+            </div>
+
+        </div>
+    </section><!-- .cont03 end -->
+
+
+    <footer>
+        <div class="inner">
+            <div class="top">
+                <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">패널티 정책</a></li>
+                    <li><a href="#">검수기준</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </div>
+            <div class="mid">
+                <dl class="d01">
+                    <dt>(주)에스엘디티</dt>
+                    <dd>주식회사 에스엘디티 (SLDT Co., Ltd.) 대표 : 한문일 사업자등록번호 : 113-86-12510 사업자정보<br>
+                        오피스 : 서울특별시 성동구 아차산로 9길 12 1층 솔드아웃 오피스 (전화번호: 070-5117-5114)검수센터: 서울특별시 성동구 아차산로 126 지하 2층 솔드아웃 검수센터<br>
+                        호스팅서비스: 마이크로소프트</dd>
+                    <dd>주식회사 에스엘디티는 통신판매 중개자로서 통신판매의 당사자가 아니므로 개별판매자가 등록한 상품정보에 대해서 책임지지 않습니다.<br>
+                        단, 거래과정에서 검수하고 보증하는 내용에 대한 책임은 당사에 있습니다.</dd>
+                </dl>
+                <dl class="d02">
+                    <dt>고객센터</dt>
+                    <dd>평일 09:00 ~ 18:00 (주말・공휴일 휴무)<br>
+                        점심 12:00 ~ 13:00</dd>
+                    <dd>1:1 문의는 솔드아웃 앱에서 가능합니다.</dd>
+                    <ul>
+                        <li><a href="#"><img src="img/youtube.svg" alt="유튜브"></a></li>
+                        <li><a href="#"><img src="img/instargram.svg" alt="인스타"></a></li>
+                        
+                    </ul>
+                </dl>
+
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
