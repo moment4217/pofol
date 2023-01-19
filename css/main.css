@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+section {
+    height: 100vh;
+}
 /* 🌹header */
 header {
     height: 100px;
@@ -9,6 +11,11 @@ header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header .inner h1 img {
+    width: 100px;
+    height: 100%;
+
 }
 header .inner ul li {
     display: inline-block;
@@ -21,16 +28,32 @@ header .inner .right_menu li:nth-child(1) {
     margin-right: 20px;
 }
 
+header.fi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.635);
+    color: #fff;
+    z-index: 9;
+}
+header .inner nav ul .off {
+    color: #f0b241;
+}
+
 /* 🌹 .main_visual */
 .main_visual {
-    width: calc(100% - 200px);
+    width: 100%;
     height: calc(100vh - 100px);
     margin: 0 auto;
+    background-color: #f0b241;
+    position: relative;
 }
-.main_visual video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.main_visual h2 {
+    font-size: 100px;
+    position: absolute;
+    bottom: 300px;
+    right: 200px;
 }
 
 /* 🌹 .video */
@@ -121,7 +144,7 @@ header .inner .right_menu li:nth-child(1) {
     margin-top: 120px;
 }
 
-/* 슬라이드 버튼, 페이징 위치 변경 */
+/* 📌슬라이드 버튼, 페이징 위치 변경 */
 .video .list {
     position: relative;
 }
@@ -159,10 +182,39 @@ header .inner .right_menu li:nth-child(1) {
     width: auto;
 }
 
+
+/* 📌.graphic */
+.graphic {
+    padding: 180px 0;
+    background-color: #aac4ff;
+    color: #eef1ff;
+}
+.graphic .title {
+    text-align: center;
+}
+.graphic .list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.graphic .list .item {
+    width: calc(100% / 4 - 15px);
+    margin-bottom: 30px;
+}
+.graphic .list .item a img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+}
+
+.graphic .list .item a .info h4 {
+    font-size: 25px;
+    margin: 15px 0 10px;
+}
+
+/* 📌웹디자인/웹퍼블리싱 */
 .web {
     padding: 180px 0;
-    background-color: rgb(0, 223, 223);
-    color: yellow;
 }
 
 .web .inner .title {
@@ -170,22 +222,27 @@ header .inner .right_menu li:nth-child(1) {
 }
 
 .web .inner .list {
+    align-items: center;
+}
+.web .inner .list .item {
+    width: 100%;
+    height: 40vh;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
 }
-.web .inner .list .item {
-    width: calc(100% /3 - 15px);
-    margin: 0 7px;
 
-}
 .web .inner .list .item figure {
-    width: 100%;
+    width: 400px;
     height: 370px;
 }
 .web .inner .list .item figure img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background: url(../img/mac.png) cover no-repeat;
+    z-index: -9;
+    
+
+    
 }
 .web .inner .list .item .info {
     background-color: #fff;
@@ -213,36 +270,10 @@ header .inner .right_menu li:nth-child(1) {
     margin-top: 40px ;
 }
 
-/* .graphic */
-.graphic {
-    padding: 180px 0;
-}
-.graphic .title {
-    text-align: center;
-}
-.graphic .list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.graphic .list .item {
-    width: calc(100% / 4 - 15px);
-    margin-bottom: 30px;
-}
-.graphic .list .item a img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-}
-
-.graphic .list .item a .info h4 {
-    font-size: 25px;
-    margin: 15px 0 10px;
-}
-
+/* 📌프로필 */
 .profile {
     padding: 180px 0;
-    background-color: tan;
+    background-color: #aac4ff;
 }
 .profile .list {
     display: flex;
@@ -289,7 +320,7 @@ header .inner .right_menu li:nth-child(1) {
     background-color: blue;
 }
 
-/* footer */
+/* 📌footer */
 footer {
     padding: 70px 0;
     background-color: #333;

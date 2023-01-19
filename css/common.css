@@ -19,6 +19,9 @@ body {
 }
 
 /* 공통 스타일 */
+section {
+    height: 100vh;
+}
 .inner {
     width: 1440px;
     margin: 0 auto;
